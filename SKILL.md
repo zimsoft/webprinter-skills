@@ -1,17 +1,17 @@
 ---
 name: webprinter-print
-description: WebPrinter 云打印服务技能集合。支持云平台漫游打印和局域网直连打印两大场景，共用 any.webprinter.cn 后端。
+description: 智睦云打印服务技能集合。支持云平台漫游打印和局域网直连打印两大场景，共用智睦云服务。
 version: 2.0.0
 env_vars:
   - WEBPRINTER_ACCESS_TOKEN
   - CDF_PRINT_API_KEY
 ---
 
-# WebPrinter 打印服务
+# 云打印服务
 
-本技能是打印服务的总入口。根据用户意图自动路由到对应的子技能：
+本技能是云打印服务的总入口。根据用户意图自动路由到对应的子技能：
 
-- 用户在云平台已绑定打印机 → 加载 [[cloud-print]]
+- 用户所在企业在云平台已共享打印机 → 加载 [[cloud-print]]
 - 用户有局域网物理打印机 → 加载 [[lan-print]]
 
 ## 服务信息
@@ -29,7 +29,7 @@ env_vars:
   ├─ 用户指定了云平台上的打印机名称 → cloud-print
   ├─ 用户提供了局域网 IP + 打印机型号 → lan-print
   ├─ 用户说"局域网打印机""网络打印机""9100""直接连打印机" → lan-print
-  └─ 无法判断 → 询问用户：打印机是云平台绑定的还是本地的
+  └─ 无法判断 → 询问用户：打印机是云打印机的还是局域网打印机
 ```
 
 ## 公共 API
@@ -79,5 +79,5 @@ Authorization: Bearer <CDF_PRINT_API_KEY>   （可选）
 
 ## 子技能
 
-- [[cloud-print]] — 云平台漫游打印、直接打印到云绑定设备
-- [[lan-print]] — 局域网打印机发现、驱动匹配、云端渲染、9100 直连下发
+- [[cloud-print]] — 云平台漫游打印、直接打印到云打印机
+- [[lan-print]] — 局域网打印机发现、驱动匹配、云端渲染、RAW(9100)直连下发
