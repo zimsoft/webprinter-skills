@@ -52,8 +52,6 @@ env_vars:
 
 - 路径：`POST /openapi/task/createRoamingTask`
 - Content-Type：`application/json`
-- 响应解析：返回的是纯文本任务 ID（非 JSON），需从响应体中提取
-
 请求体：
 
 | 字段 | 类型 | 必填 | 说明 |
@@ -62,7 +60,12 @@ env_vars:
 | `url` | string | 是 | 文件的可访问 HTTPS URL |
 | `mediaFormat` | string | 是 | 文件格式，见"支持的文件格式"章节 |
 
-响应：返回纯文本 taskId（如 `TASK_20240324_001`）
+响应 JSON：
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `success` | boolean | 是否成功 |
+| `data` | string | 任务 ID（如 `TASK_20240324_001`）
 
 ---
 
