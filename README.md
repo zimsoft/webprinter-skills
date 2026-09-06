@@ -24,7 +24,7 @@ Token 获取地址：`https://any.webprinter.cn/get-ai-server-token`
 
 | 环境变量 | 场景 | 必填 |
 |----------|------|------|
-| `CDF_PRINT_API_KEY` | 局域网打印 | 否 |
+| `WEBPRINTER_ACCESS_TOKEN` | 局域网打印 | 否 |
 | `CDF_PRINT_CONFIG_JSON` | 局域网打印 | 否（JSON，如 `{"copies":2}`） |
 
 局域网打印的 DOCX/PPT 转换需要 LibreOffice（仅在 `_cvturl` 超时降级时用到）。

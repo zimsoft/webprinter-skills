@@ -2,7 +2,7 @@
 name: lan-print
 description: 局域网直连打印 — 发现网络打印机、匹配驱动、云端渲染、9100 端口下发。适用于用户有物理打印机和 IP 的场景。
 env_vars:
-  - CDF_PRINT_API_KEY
+  - WEBPRINTER_ACCESS_TOKEN
 ---
 
 # 局域网直连打印
@@ -11,11 +11,11 @@ env_vars:
 
 ## 认证
 
-- 环境变量 `CDF_PRINT_API_KEY`（可选 Bearer Token）
+- 环境变量 `WEBPRINTER_ACCESS_TOKEN`（可选 Bearer Token）
 - 所有请求携带 Headers：
   - `tid: cdf_ai_terminal`
   - `ttp: AI`
-  - 如果配置了 `CDF_PRINT_API_KEY`，附加 `Authorization: Bearer <token>`
+  - 如果配置了 `WEBPRINTER_ACCESS_TOKEN`，附加 `Authorization: Bearer <token>`
 
 ---
 

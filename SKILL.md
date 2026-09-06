@@ -4,7 +4,7 @@ description: 智睦云打印服务技能集合。支持云平台漫游打印和�
 version: 2.0.0
 env_vars:
   - WEBPRINTER_ACCESS_TOKEN
-  - CDF_PRINT_API_KEY
+  - WEBPRINTER_ACCESS_TOKEN
 ---
 
 # 云打印服务
@@ -65,7 +65,7 @@ Authorization: Bearer <WEBPRINTER_ACCESS_TOKEN>
 ```
 tid: cdf_ai_terminal
 ttp: AI
-Authorization: Bearer <CDF_PRINT_API_KEY>   （可选）
+Authorization: Bearer <WEBPRINTER_ACCESS_TOKEN>   （可选）
 ```
 
 ## 错误码速查
