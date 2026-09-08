@@ -4,7 +4,7 @@
 
 支持两大场景：
 - **云平台打印** — 漫游打印、直接打印到云绑定设备
-- **局域网打印** — 发现网络打印机、匹配驱动、云端渲染、通过 9100 端口下发
+- **局域网云驱直连** — 企业未开通云打印时的临时应急方案
 
 ## 安装
 
@@ -24,10 +24,10 @@ Token 获取地址：`https://any.webprinter.cn/get-ai-server-token`
 
 | 环境变量 | 场景 | 必填 |
 |----------|------|------|
-| `WEBPRINTER_ACCESS_TOKEN` | 局域网打印 | 否 |
-| `CDF_PRINT_CONFIG_JSON` | 局域网打印 | 否（JSON，如 `{"copies":2}`） |
+| `WEBPRINTER_ACCESS_TOKEN` | 局域网云驱直连 | 否 |
+| `CDF_PRINT_CONFIG_JSON` | 局域网云驱直连 | 否（JSON，如 `{"copies":2}`） |
 
-局域网打印的 DOCX/PPT 转换需要 LibreOffice（仅在 `_cvturl` 超时降级时用到）。
+局域网云驱直连的 DOCX/PPT 转换需要 LibreOffice（仅在 `_cvturl` 超时降级时用到）。
 
 ## 使用
 
@@ -37,18 +37,20 @@ Token 获取地址：`https://any.webprinter.cn/get-ai-server-token`
 帮我打印这个文件：/path/to/document.pdf
 ```
 
-AI 会自动加载技能并选择对应的打印方式。
+AI 会自动加载技能，按引导流程选择对应的打印方式（云打印优先；未开通云打印时引导联系管理员，仅紧急情况走局域网云驱直连）。
 
 ## 目录结构
 
 ```
 webprinter-skills/
 ├── README.md
-├── SKILL.md                  # 主入口 — 路由决策 + 公共信息
+├── SKILL.md                  # 主入口 — 引导流程（token → 云打印优先 → 无共享打印机找管理员）+ 公共信息
 ├── cloud-print/
-│   └── SKILL.md              # 云平台打印子技能
+│   └── SKILL.md              # 云打印主流程子技能（漫游/直打/参数更新）
+├── init-server/
+│   └── SKILL.md              # 管理员安装打印服务器并共享打印机
 └── lan-print/
-    └── SKILL.md              # 局域网打印子技能
+    └── SKILL.md              # 局域网云驱直连（仅未开通云打印时的临时应急方案）
 ```
 
 ## 更新
