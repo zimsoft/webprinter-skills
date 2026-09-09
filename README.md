@@ -20,7 +20,7 @@
 |----------|------|------|
 | `WEBPRINTER_ACCESS_TOKEN` | 云平台打印 | 是 |
 
-Token 获取地址：`https://any.webprinter.cn/get-ai-server-token`
+Token 获取地址：[https://any.webprinter.cn/get-ai-server-token](https://any.webprinter.cn/get-ai-server-token)
 
 | 环境变量 | 场景 | 必填 |
 |----------|------|------|

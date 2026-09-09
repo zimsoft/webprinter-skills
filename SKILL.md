@@ -16,7 +16,7 @@ env_vars:
 
 调用云平台接口前，需要先有访问令牌：
 
-- 如果你还没有 `WEBPRINTER_ACCESS_TOKEN`，先引导你去 `https://any.webprinter.cn/get-ai-server-token` 获取，拿到后再继续。
+- 如果你还没有 `WEBPRINTER_ACCESS_TOKEN`，先引导你去 [https://any.webprinter.cn/get-ai-server-token](https://any.webprinter.cn/get-ai-server-token) 获取，拿到后再继续。
 - 如果接口返回 401，同样先引导你重新获取 Token，再继续。
 
 ### 第 2 步：优先使用云打印（cloud-print）

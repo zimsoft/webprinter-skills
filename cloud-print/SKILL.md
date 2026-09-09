@@ -11,7 +11,7 @@ env_vars:
 
 ## 认证
 
-- 环境变量 `WEBPRINTER_ACCESS_TOKEN`（没有就先引导用户去 `https://any.webprinter.cn/get-ai-server-token` 获取）
+- 环境变量 `WEBPRINTER_ACCESS_TOKEN`（没有就先引导用户去 [https://any.webprinter.cn/get-ai-server-token](https://any.webprinter.cn/get-ai-server-token) 获取）
 - Header：`Authorization: Bearer ***`
 
 ---
