@@ -11,7 +11,7 @@
 在 AI 助手中直接说：
 
 ```
-帮我安装这个技能 https://github.com/zimsoft/webprinter-skills
+帮我安装云打印技能 https://github.com/zimsoft/webprinter-skills
 ```
 
 ## 配置
