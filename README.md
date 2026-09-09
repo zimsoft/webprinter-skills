@@ -1,4 +1,4 @@
-# WebPrinter Skills
+# 智睦云打印技能集合
 
 智睦云打印技能集合 — 让 AI 助手（Trae、QClaw、WorkBuddy 等）学会执行打印操作。
 
